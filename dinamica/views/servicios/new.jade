@@ -1,0 +1,22 @@
+extends ../layout.jade
+block contenido
+    div(class="col-md-5 center-block quitar-float espacio-arriba text-left")
+        h1 Agregar Servicios
+        form(method="post" action="/servicios" style="margin-top:1.5em;" enctype="multipart/form-data")
+            div(class="form-group")
+                label Nombre
+                input(type="text" name="title"  placeholder="Nombre del Servicio" class="form-control")
+            div(class="form-group")
+                label Descripción
+                textarea(name="description"  placeholder="Descripción del Servicio" class="form-control")
+            div(class="form-group")
+                label Costo
+                input(type="number" name="pricing"  placeholder="Precio del Servicio" class="form-control")
+            div(class="form-group")
+                label Imagen del Servicio
+                input(type="file" name="image_avatar")
+            div(class="form-group")
+                label Contraseña
+                input(type="password" name="password"  placeholder="Contraseña" class="form-control")
+            div(class="form-group text-right")
+                input(type="submit" class="btn btn-info" value="Grabar")
