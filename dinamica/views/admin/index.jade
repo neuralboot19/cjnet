@@ -1,0 +1,26 @@
+extends ../layout.jade
+block contenido
+	h1 Panel Administrativo
+	table(class="table")
+		caption Servicios Actuales.
+		thead
+			tr
+				th #
+				th Nombre
+				th Descripcion
+				th Precio
+				th Imagenes
+				th Acciones
+		tbody
+			each Servicio in servicioo
+				tr
+					td= servicioo.id
+					td= servicioo.title
+					td= servicioo.description
+					td= servicioo.pricing
+					td
+						a(href="#{servicioo.imageUrl}" class="btn") Ver Imagen
+					td
+						a(href="/servicios/edit/#{servicioo.id}") Editar
+						=" - "
+						a(href="#") Eliminar

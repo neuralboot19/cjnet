@@ -1,0 +1,9 @@
+extends ../layout.jade
+block contenido
+	h2(class='russo big azul') Menu
+	p Servicios de calidad
+	each Servicio in servicioo
+		div(class="col-md-4 col-sm-6 col-xs-12 inline-block")
+			h3(class="russo")= servicio.title
+			img(src="#{ servicio.imgeUrl }" class="col-xs-7 col-md-4 quitar-float")
+			p(style="margin-top:1em;") #[small(class="lato small") #{servicio.pricing}BsF ]

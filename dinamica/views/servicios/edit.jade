@@ -1,0 +1,23 @@
+extends ../layout.jade
+block contenido
+    div(class="col-md-5 center-block quitar-float espacio-arriba text-left")
+        h1 Editar Servicios
+        form(method="put" action="/servicios/#{servicioo.id}" style="margin-top:1.5em;" enctype="multipart/form-data")
+            div(class="form-group")
+                label Nombre
+                input(type="text" name="title" value="#{servicioo.title}"  placeholder="Nombre del Servicio" class="form-control")
+            div(class="form-group")
+                label Descripción
+                textarea(name="description" placeholder="Descripción del Servicio" class="form-control")
+                    =servicioo.description
+            div(class="form-group")
+                label Costo
+                input(type="number" name="pricing" value="#{servicioo.pricing}" placeholder="Precio del Servicio" class="form-control")
+            div(class="form-group")
+                label Imagen del Servicio No New
+                input(type="file" name="image_avatar")
+            div(class="form-group")
+                label Contraseña No New
+                input(type="password" name="password"  placeholder="Contraseña" class="form-control")
+            div(class="form-group text-right")
+                input(type="submit" class="btn btn-info" value="Grabar")
