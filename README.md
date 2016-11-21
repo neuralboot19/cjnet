@@ -1,3 +1,4 @@
 # cjnet
 Página Web de CJ.Net F.P.
-Por. JOsé E. Castellanos G.
+Por. José E. Castellanos G.
+Programador NIC Tec C.A.
